@@ -40,17 +40,17 @@ const ruleMiniCss = {
 }
 const rules = [ruleMiniCss]
 
-const optCss = new CssMinimizerPlugin()
-const optimization = {
-  minimize: true,
-  minimizer: [optCss, '...'],
-  // Once your build outputs multiple chunks, this option will ensure they share the webpack runtime
-  // instead of having their own. This also helps with long-term caching, since the chunks will only
-  // change when actual code changes, not the webpack runtime.
-  runtimeChunk: {
-    name: 'runtime'
-  }
-}
+// const optCss = new CssMinimizerPlugin()
+// const optimization = {
+//   minimize: true,
+//   minimizer: [optCss, '...'],
+//   // Once your build outputs multiple chunks, this option will ensure they share the webpack runtime
+//   // instead of having their own. This also helps with long-term caching, since the chunks will only
+//   // change when actual code changes, not the webpack runtime.
+//   runtimeChunk: {
+//     name: 'runtime'
+//   }
+// }
 
 const performance = {
   hints: false,
@@ -64,6 +64,6 @@ module.exports = merge(common, {
   output,
   plugins,
   module: { rules },
-  optimization,
+  // optimization,
   performance
 })

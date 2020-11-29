@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
+const deps = require('../package.json').dependencies
 
 // Input
 const entry = [paths.src + '/index.js']
@@ -64,7 +65,11 @@ const moduleFederationPlugin = new ModuleFederationPlugin({
   exposes: {
     './SomeComponent': './src/components/some-component'
   },
-  shared: require('../package.json').dependencies
+  shared: {
+    ...deps,
+    react: { singleton: true, requiredVersion: deps.react },
+    'react-dom': { singleton: true, requiredVersion: deps['react-dom'] }
+  }
 })
 
 const plugins = [cleanWebpackPlugin, copyWebpackPlugin, htmlWebpackPlugin, moduleFederationPlugin]
