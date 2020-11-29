@@ -7,6 +7,13 @@ const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
 
+// Output
+const output = {
+  publicPath: process.env.PUBLIC_PATH
+}
+
+console.log('ouput', output)
+
 const devServer = {
   historyApiFallback: true,
   contentBase: paths.build,
@@ -22,6 +29,7 @@ const plugins = [hotModuleReplacementPlugin]
 
 module.exports = merge(common, {
   mode: 'development',
+  output,
   // Control how source maps are generated
   devtool: 'inline-source-map',
   // Spin up a server for quick development

@@ -7,10 +7,6 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 // Input
 const entry = [paths.src + '/index.js']
-// Output
-const output = {
-  publicPath: process.env.PUBLIC_PATH
-}
 
 // JavaScript: Use Babel to transpile JavaScript files
 // const ruleJs = { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] }
@@ -75,7 +71,6 @@ const plugins = [cleanWebpackPlugin, copyWebpackPlugin, htmlWebpackPlugin, modul
 
 module.exports = {
   entry,
-  output,
   plugins,
   module: { rules }
 }
