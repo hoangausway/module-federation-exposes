@@ -14,6 +14,7 @@ const output = {
   assetModuleFilename: 'images/[hash][ext][query]',
   publicPath: process.env.PUBLIC_PATH
 }
+console.log('ouput', output)
 
 // Extracts CSS into separate files
 // Note: style-loader is for development, MiniCssExtractPlugin is for production
