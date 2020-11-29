@@ -56,7 +56,7 @@ const copyWebpackPlugin = new CopyWebpackPlugin({
 })
 // Generates an HTML file from a template
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  title: 'Webpack 5 Boilerplate',
+  title: 'Module Federation: Exposes',
   favicon: paths.src + '/images/favicon.png',
   template: paths.src + '/template.html', // template file
   filename: 'index.html' // output file
