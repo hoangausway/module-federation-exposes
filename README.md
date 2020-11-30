@@ -1,7 +1,7 @@
-# 📦 webpack5 Boilerplate
+# Webpack 5 with Module Federation - exposes
 modified from git@github.com:taniarascia/webpack-boilerplate
 
-Minimal Webpack 5 boilerplate with a hot dev server and an optimized production build.
+Minimal Webpack 5 boilerplate with a hot dev server, Module Federation and react, styled-components.
 
 ## Installation
 
@@ -47,7 +47,9 @@ live-server ./dist
 - generate html file from template.html
 - copy static assets from ./public
 - clean ./dist folder
-- optimize css in production mode
+- Module Federation
+- react
+- styled-componets
 
 ## Dependencies
 
@@ -63,6 +65,7 @@ live-server ./dist
 
 - [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
 - [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
+- [`@babel/preset-react`](https://babeljs.io/docs/en/babel-preset-react) - Smart defaults for Babel
 
 ### Loaders
 
@@ -76,7 +79,6 @@ live-server ./dist
 - [`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin) - Copy files to build directory
 - [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - Generate HTML files from template
 - [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
-- [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
 
 ## Author
 - Hoang Nguyen

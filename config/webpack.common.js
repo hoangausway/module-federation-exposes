@@ -10,7 +10,6 @@ const deps = require('../package.json').dependencies
 const entry = [paths.src + '/index.js']
 
 // JavaScript: Use Babel to transpile JavaScript files
-// const ruleJs = { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] }
 const ruleJs = {
   test: /\.(js|jsx)$/,
   exclude: /node_modules/,
