@@ -6,7 +6,7 @@ const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 const output = {
   path: paths.build,
@@ -40,6 +40,7 @@ const ruleMiniCss = {
 }
 const rules = [ruleMiniCss]
 
+// optimization congif conflicts with Module Federation; not sure about reason
 // const optCss = new CssMinimizerPlugin()
 // const optimization = {
 //   minimize: true,
